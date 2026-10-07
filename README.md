@@ -14,7 +14,7 @@ A web crawler starts with an initial list of URLs to visit, which are called *se
 
 **Web Scraper:** A process in which data is extracted from webpages and entered into a local database.
 
-A web scraper parses a webpage's DOM and identifies the HTML elements which contain relevant data. The data is extracted and converted into a structured format.\[^1]
+A web scraper parses a webpage's DOM and identifies the HTML elements which contain relevant data. The data is extracted and converted into a structured format.[^1]
 
 
 
@@ -42,7 +42,7 @@ I chose CSV as a simple format for storing the data.
 
 
 
-I created a subclass of Scrapy's Spider class, giving a *name* and *start\_urls* for the scraper. Overwrite the parse function, which takes a webpage as an argument in *response*, and use Path library to write the body of each URL into a new file. The *.css()* method allows to search the webpage's HTML using a given CSS selector, which is composed of an HTML element and its class. *.get()* retrieves the first match, while *.getall()* retrieves all matches. Inspect element to find CSS selectors.\[^2]
+I created a subclass of Scrapy's Spider class, giving a *name* and *start\_urls* for the scraper. Overwrite the parse function, which takes a webpage as an argument in *response*, and use Path library to write the body of each URL into a new file. The *.css()* method allows to search the webpage's HTML using a given CSS selector, which is composed of an HTML element and its class. *.get()* retrieves the first match, while *.getall()* retrieves all matches. Inspect element to find CSS selectors.[^2]
 
 
 
@@ -50,7 +50,7 @@ Run *scrapy crawl charts -O charts.csv*
 
 
 
-\[^1]: https://oxylabs.io/blog/web-scraping
+[^1]: https://oxylabs.io/blog/web-scraping
 
-\[^2]: https://docs.scrapy.org/en/latest/intro/tutorial.html
+[^2]: https://docs.scrapy.org/en/latest/intro/tutorial.html
 
