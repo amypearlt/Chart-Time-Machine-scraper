@@ -26,7 +26,7 @@ In order to access chart information on the website, the user must fill in a dro
 
 Using my browser's *Inspect Element* feature, I could view the HTML code of the webpage and determine the CSS selectors used to contain data such as the song name, the song's artist, the peak position of the song, and so on.[^2]
 
-##### **(4)** Choose a filetype to store the data.
+###### **(4)** Choose a filetype to store the data.
 
 I chose CSV as a standard format for storing data, making it convenient to export into spreadsheets or databases.
 
