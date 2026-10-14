@@ -1,1 +1,6 @@
+.scrapy/
+
+__pycache__/
+*.pyc
+
 *.csv
