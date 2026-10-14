@@ -1,10 +1,17 @@
-I used Scrapy, a Python framework for web crawling and scraping, in order to extract data from [The Chart Time Machine](https://www.charttimemachine.com).
+I used Scrapy, a Python framework for web crawling and scraping, in order to extract data from [The Chart Time Machine](https://www.charttimemachine.com), a web archive of 20th century UK singles charts.
+
+To scrape **all** charts from the 20th century, use:
 
 `scrapy crawl charts`
 
+To scrape weekly charts from within a specified period of time, pass your arguments using from_date and to_date:\
+Keep in mind that the furthest back you can go is 1952-11-14, and the charts end at 1999-12-16.
+
+`scrapy crawl charts -a from_date=XXXX-XX-XX -a to_date=XXXX-XX-XX`
+
 To dump the scraped data to a CSV file, use the output command:
 
-`scrapy crawl charts -o charts.csv`
+`scrapy crawl charts -O charts.csv`
 
 ## A brief definition of web crawling and web scraping
 
