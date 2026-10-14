@@ -1,6 +1,10 @@
 I used Scrapy, a Python framework for web crawling and scraping, in order to extract data from [The Chart Time Machine](https://www.charttimemachine.com).
 
-`scrapy crawl charts -O charts.csv`
+`scrapy crawl charts`
+
+To dump the scraped data to a CSV file, use the output command:
+
+`scrapy crawl charts -o charts.csv`
 
 ## A brief definition of web crawling and web scraping
 

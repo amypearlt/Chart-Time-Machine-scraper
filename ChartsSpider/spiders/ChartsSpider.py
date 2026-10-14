@@ -20,12 +20,12 @@ class ChartsSpider(scrapy.Spider):
                 "artist":        chart.css("td:nth-child(2) a::text").get(),
                 "song":          chart.css("td:nth-child(3) a::text").get(),
                 "label":         chart.css("td:nth-child(4) a::text").get(),
-                "week":          start_date.isoformat(),
+                "week":          start_date,
             }
             song_url = chart.css("td:nth-child(3) a::attr(href)").get()
             yield response.follow(song_url, callback=self.parse_song, cb_kwargs={"item": item}, dont_filter=True)
 
     def parse_song(self, response, item):
-        item["genre"] = response.css("div.artist_info_right:nth-of-type(14)::text").get()
-        item["subgenre"] = response.css("div.artist_info_right:nth-of-type(17)::text").get()
+        item["genre"] = response.css('div.artist_info_left:contains("Genre") + div.artist_info_right::text').get()
+        item["subgenre"] = response.css('div.artist_info_left:contains("Style") + div.artist_info_right::text').get()
         yield item
