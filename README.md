@@ -20,7 +20,7 @@ I had to choose a UK charts website (Weekly UK Top 100 Singles Charts) where web
 
 ### 2. Identify and collect URLs.
 
-In order to access chart information on the website, the user must fill in a dropdown menu requiring a date range and a range of chart positions. Since the website exposes search criteria through their URL's query parameters, the process of iterating through each weekly chart was convenient; I constructed the URL's query for every week within the desired time frame. 
+In order to access chart information on the website, the user must fill in a dropdown menu requiring a date range and a range of chart positions. Since the website exposes search criteria through their URL's query parameters, the process of iterating through each weekly chart was convenient; I constructed the URL's query for every week within the desired time frame. Every song in the chart list contains a link to the song's own webpage, containing information about the song's genre and other statistics; I followed these links for every song to extract these details.
 
 ### 3. Identify CSS selectors which contain the relevant data.
 
