@@ -4,12 +4,13 @@ To scrape **all** charts from the 20th century, use:
 
 `scrapy crawl charts`
 
-To scrape weekly charts from within a specified period of time, pass your arguments using from_date and to_date:\
-Keep in mind that the furthest back you can go is 1952-11-14, and the charts end at 1999-12-16.
+To scrape weekly charts from within a specified period of time, pass your arguments using `from_date` and `to_date`:\
+Keep in mind that the furthest back you can go is `1952-11-14`, and the charts end at `1999-12-16`.
 
-`scrapy crawl charts -a from_date=XXXX-XX-XX -a to_date=XXXX-XX-XX`
+`scrapy crawl charts -a from_date=1969-01-12 -a to_date=1971-11-08`
 
-To dump the scraped data to a CSV file, use the output command:
+To dump the scraped data to a CSV file, use the output command:\
+JSON and XML formats can also be used to export data.
 
 `scrapy crawl charts -O charts.csv`
 
