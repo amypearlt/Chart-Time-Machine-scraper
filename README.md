@@ -4,7 +4,19 @@ To scrape **all** charts from the 20th century, use:
 
 `scrapy crawl charts`
 
-To scrape weekly charts from within a specified period of time, pass your arguments using `from_date` and `to_date`:\
+To scrape a specific year, use `year`:
+
+`scrapy crawl charts -a year=1963`
+
+To scrape a specific decade, use `decade`:
+
+`scrapy crawl charts -a decade=1990`
+
+To scrape a week beginning on a specific date, use `week`:
+
+`scrapy crawl charts -a week=1982-05-14`
+
+To scrape weekly charts within a specific date range, pass your start and end dates via `from_date` and `to_date`:\
 Keep in mind that the furthest back you can go is `1952-11-14`, and the charts end at `1999-12-16`.
 
 `scrapy crawl charts -a from_date=1969-01-12 -a to_date=1971-11-08`
